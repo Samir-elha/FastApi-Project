@@ -1,7 +1,5 @@
-from fastapi import FastAPI, Body
+from fastapi import FastAPI
 
-from app.model import MovieSchema, UpdateMovieSchema
-from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()

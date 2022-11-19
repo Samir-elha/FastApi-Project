@@ -5,11 +5,10 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    # "http://localhost/",
-    # "http://localhost:8080/",
-    # "https://localhost.tiangolo.com/",
-    # "http://127.0.0.1:5500/"
-    "*"
+    "http://localhost",
+    "http://localhost:8080",
+    "https://localhost",
+    "https://samir-elha.github.io"
 ]
 
 app.add_middleware(
@@ -28,18 +27,11 @@ app.add_middleware(
 #     }
 # ]
 
-genres = [
-    {
-        "id": 1,
-        "genre": "Horror",
-        "movies": ["The Conjuring", "IT 2", "Annabelle"]
-    },
-    {
-        "id": 2,
-        "genre": "Comedy",
-        "movies": ["See How They Run", "Big Momma 2", "The Banshees of Inisherin"]
-    }
-]
+genres = {
+"movies": [
+    {"id": 1, "genre": "Horror","movies": ["The Conjuring", "IT 2", "Annabelle"]},
+    {"id": 2, "genre": "Comedy","movies": ["See How They Run", "Big Momma 2", "The Banshees of Inisherin"]}
+]}
 
 @app.get("/", tags=["Home"])
 def get_root() -> dict:

@@ -1,0 +1,17 @@
+services:
+  fastapi:
+    public: true
+    image: DOCKERHUBUSERNAME/fastapi-crud:latest
+    build: .
+    replicas: 1
+    ports:
+      - 8080
+    resources:
+      cpu: 100m
+      memory: 128Mi
+  mongodb:
+    image: bitnami/mongodb:latest
+    ports:
+      - 27017
+    volumes:
+      - /bitnami/mongodb

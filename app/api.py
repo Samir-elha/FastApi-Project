@@ -21,13 +21,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-recipes = [
-    {
-        "id": 1,
-        "name": "Donuts",
-        "ingredients": ["Flour", "Milk", "Sugar", "Vegetable Oil"]
-    }
-]
+# recipes = [
+#     {
+#         "id": 1,
+#         "name": "Donuts",
+#         "ingredients": ["Flour", "Milk", "Sugar", "Vegetable Oil"]
+#     }
+# ]
 
 genres = [
     {
@@ -48,11 +48,11 @@ def get_root() -> dict:
         "message": "Welcome to the okteto's app."
     }
 
-@app.get("/recipe", tags=["Recipe"])
-def get_recipes() -> dict:
-    return {
-        "data": recipes
-    }
+# @app.get("/recipe", tags=["Recipe"])
+# def get_recipes() -> dict:
+#     return {
+#         "data": recipes
+#     }
 
 @app.get("/genre", tags=["Genre"])
 def get_genres() -> dict:
@@ -78,29 +78,29 @@ def get_genre(id: int) -> dict:
         "error": "No such recipe with ID {} exist".format(id)
     }
 
-@app.get("/recipe/{id}", tags=["Recipe"])
-def get_recipe(id: int) -> dict:
-    if id > len(recipes) or id < 1:
-        return {
-            "error": "Invalid ID passed."
-        }
-
-    for recipe in recipes:
-        if recipe['id'] == id:
-            return {
-                "data": [
-                    recipe
-                ]
-            }
-
-    return {
-        "error": "No such recipe with ID {} exist".format(id)
-    }
-
-@app.post("/recipe", tags=["Recipe"])
-def add_recipe(recipe: RecipeSchema = Body(...)) -> dict:
-    recipe.id = len(recipes) + 1
-    recipes.append(recipe.dict())
-    return {
-        "message": "Recipe added successfully."
-    }
+# @app.get("/recipe/{id}", tags=["Recipe"])
+# def get_recipe(id: int) -> dict:
+#     if id > len(recipes) or id < 1:
+#         return {
+#             "error": "Invalid ID passed."
+#         }
+#
+#     for recipe in recipes:
+#         if recipe['id'] == id:
+#             return {
+#                 "data": [
+#                     recipe
+#                 ]
+#             }
+#
+#     return {
+#         "error": "No such recipe with ID {} exist".format(id)
+#     }
+#
+# @app.post("/recipe", tags=["Recipe"])
+# def add_recipe(recipe: RecipeSchema = Body(...)) -> dict:
+#     recipe.id = len(recipes) + 1
+#     recipes.append(recipe.dict())
+#     return {
+#         "message": "Recipe added successfully."
+#     }

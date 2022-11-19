@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
+</head>
+<body>
+<div x-data="{
+    movie: null,
+
+    getMovies() {
+        fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
+            .then((response) => response.json())
+            .then((json) => this.movie = json);
+    }
+}" x-init="getMovies()">
+    <p x-text="data"></p>
+    <p x-text="movie"></p>
+</div>
+
+<script>function getMovies() {
+    fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
+        .then((response) => response.json())
+        .then((json) => this.movie = json);
+}</script>
+</body>
+</html>

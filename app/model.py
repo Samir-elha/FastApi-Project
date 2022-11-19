@@ -2,7 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 
 
-class RecipeSchema(BaseModel):
+class MovieSchema(BaseModel):
     id: Optional[int]
     name: str = Field(...)
     ingredients: List[str] = Field(...)
@@ -10,20 +10,20 @@ class RecipeSchema(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "name": "Donuts",
-                "ingredients": ["Flour", "Milk", "Sugar", "Vegetable Oil"]
+                "name": "Horror",
+                "movies": ["The Conjuring", "IT 2", "Annabelle"]
             }
         }
 
 
-class UpdateRecipeSchema(BaseModel):
+class UpdateMovieSchema(BaseModel):
     name: Optional[str]
     ingredients: Optional[List[str]]
 
     class Config:
         schema_extra = {
             "example": {
-                "name": "Buns",
-                "ingredients": ["Flour", "Milk", "Sugar", "Vegetable Oil"]
+                "Genre": "Comedy",
+                "movies": ["See How They Run", "Big Momma 2", "The Banshees of Inisherin"]
             }
         }

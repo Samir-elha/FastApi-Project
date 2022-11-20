@@ -27,10 +27,10 @@ app.add_middleware(
 #     }
 # ]
 
-genres = {
+genres = [
     {"id": 1, "genre": "Horror","movies": ["The Conjuring", "IT 2", "Annabelle"]},
     {"id": 2, "genre": "Comedy","movies": ["See How They Run", "Big Momma 2", "The Banshees of Inisherin"]}
-}
+]
 
 @app.get("/", tags=["Home"])
 def get_root() -> dict:

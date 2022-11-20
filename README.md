@@ -18,7 +18,7 @@ Hieronder heb ik de openapi docs open met uitleg.
 <img width="731" alt="image" src="https://user-images.githubusercontent.com/91054513/202922456-7719f4d9-3d5a-47e1-8dec-494447adba51.png">
 
 
-### GET /genre{idS}
+### GET /genre{id}
 
 <img width="582" alt="image" src="https://user-images.githubusercontent.com/91054513/202922511-a7a58a2e-9f1b-4a7b-b9af-729aca175bb3.png">
 
@@ -73,7 +73,8 @@ Op het moment van bekijken front-end, krijgen we 2 genres: Horror en Comdedy met
 
 # Conclusie
 De opdracht was erg leerzaam, maar wel zat ik een aantal keer vast bij een error die moeilijk te verhelpen was. Ik heb een werkende api gebouwd met een database op de cloud, die doormiddel van Alpine JS de data verkreeg.
-
+-	Basis eisen en documentatie: 65%
+-	Stijlgeving op de front-end: 5%
 
 
 

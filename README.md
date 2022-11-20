@@ -27,24 +27,35 @@ Als we een nieuwe get request doen, zien we dat de data goed is gepost.
 ## Okteto Stack
 In de cloud heb ik 2 stacks draaien, een voor mijn api en een MONGODB database.
 
-<img width="546" alt="image" src="https://user-images.githubusercontent.com/91054513/202920939-4d330bc1-2b83-47a5-8bc6-c25c6cf56426.png">
+<img width="913" alt="image" src="https://user-images.githubusercontent.com/91054513/202921751-675586ef-9524-437f-aec9-a0a5f766d376.png">
 
 ## Back-end
 
 #### Api.py
 API.py bevat het programma met de nodige CORS en get requests.
 
-<img width="182" alt="image" src="https://user-images.githubusercontent.com/91054513/202921191-443e22bd-13a4-47c2-9bbc-94a8609c3a37.png">
+<img width="623" alt="image" src="https://user-images.githubusercontent.com/91054513/202921689-1ae5739a-863e-40db-8f3a-65323b91d558.png">
 
 #### Model.py
 Model.py is voorzien van de nodige models in ons project
 
-<img width="337" alt="image" src="https://user-images.githubusercontent.com/91054513/202921476-2565f179-593f-47e6-86eb-1645f581c91a.png">
+<img width="563" alt="image" src="https://user-images.githubusercontent.com/91054513/202921707-aaa973a6-bb88-4bb3-bb2f-79383527ea15.png">
 
 
 #### Database.py
 Database.py zorgt ervoor dat we de database kunnen vullen, updaten en verwijderen
 
-<img width="274" alt="image" src="https://user-images.githubusercontent.com/91054513/202921625-d90128e9-81d9-4234-8343-4297061c7734.png">
+<img width="585" alt="image" src="https://user-images.githubusercontent.com/91054513/202921724-be24fc0d-3e55-44bf-92a8-46752579660c.png">
+
+## Front-End
+
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/91054513/202921805-57eb7e09-3e3f-4921-978d-36bd75f025dc.png">
+
+Op het moment van bekijken front-end, krijgen we 2 genres: Horror en Comdedy met een aantal films. De input field om een film met genre toe te voegen werkt niet.
+
+# Conclusie
+De opdracht was erg leerzaam, maar wel zat ik een aantal keer vast bij een error die moeilijk te verhelpen was. Ik heb een werkende api gebouwd met een database op de cloud, die doormiddel van Alpine JS de data verkreeg.
+
+
 
 

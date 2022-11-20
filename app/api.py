@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Body
 
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -87,10 +88,15 @@ def get_genre(id: int) -> dict:
 #         "error": "No such recipe with ID {} exist".format(id)
 #     }
 #
-# @app.post("/recipe", tags=["Recipe"])
-# def add_recipe(recipe: RecipeSchema = Body(...)) -> dict:
-#     recipe.id = len(recipes) + 1
-#     recipes.append(recipe.dict())
-#     return {
-#         "message": "Recipe added successfully."
-#     }
+
+class MovieSchema(BaseModel):
+    id: int
+    genre: str
+    movies: str
+@app.post("/genre", tags=["Genre"])
+def add_recipe(genre: MovieSchema = Body(...)) -> dict:
+    genre.id = len(genres) + 1
+    genres.append(genre.dict())
+    return {
+        "message": "Recipe added successfully."
+    }

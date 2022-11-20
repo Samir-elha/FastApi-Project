@@ -4,8 +4,8 @@ from typing import Optional, List
 
 class MovieSchema(BaseModel):
     id: Optional[int]
-    name: str = Field(...)
-    ingredients: List[str] = Field(...)
+    genre: str = Field(...)
+    movies: List[str] = Field(...)
 
     class Config:
         schema_extra = {
@@ -17,8 +17,8 @@ class MovieSchema(BaseModel):
 
 
 class UpdateMovieSchema(BaseModel):
-    name: Optional[str]
-    ingredients: Optional[List[str]]
+    genre: Optional[str]
+    movies: Optional[List[str]]
 
     class Config:
         schema_extra = {

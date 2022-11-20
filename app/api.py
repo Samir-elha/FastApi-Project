@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Body
 
 from fastapi.middleware.cors import CORSMiddleware
+from app.model import MovieSchema
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -89,10 +90,10 @@ def get_genre(id: int) -> dict:
 #     }
 #
 
-class MovieSchema(BaseModel):
-    id: int
-    genre: str
-    movies: [str]
+# class MovieSchema(BaseModel):
+#     id: int
+#     genre: str
+#     movies: [str]
 
 @app.post("/genre", tags=["Genre"])
 def add_recipe(genre: MovieSchema = Body(...)) -> dict:

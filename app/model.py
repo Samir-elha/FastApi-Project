@@ -1,12 +1,10 @@
 from pydantic import BaseModel, Field
 from typing import Optional, List
 
-
 class MovieSchema(BaseModel):
     id: Optional[int]
     genre: str = Field(...)
     movies: List[str] = Field(...)
-
     class Config:
         schema_extra = {
             "example": {
@@ -15,11 +13,9 @@ class MovieSchema(BaseModel):
             }
         }
 
-
 class UpdateMovieSchema(BaseModel):
     genre: Optional[str]
     movies: Optional[List[str]]
-
     class Config:
         schema_extra = {
             "example": {

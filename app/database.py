@@ -3,9 +3,7 @@ from bson import ObjectId
 from decouple import config
 
 connection_details = config("DB_HOST")
-
 client = MongoClient(connection_details)
-
 database = client.recipes
 
 movie_collection = database.get_collection('movies_collection')
@@ -30,8 +28,8 @@ def get_single_movie(id: str) -> dict:
 
 def get_all_movies() -> list:
     movies = []
-    for recipe in movie_collection.find():
-        movies.append(parse_movie_data(recipe))
+    for genre in movie_collection.find():
+        movies.append(parse_movie_data(genre))
 
     return movies
 

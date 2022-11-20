@@ -31,7 +31,6 @@ def get_root() -> dict:
     return {
         "message": "Welcome to the okteto's app."
     }
-
 @app.get("/genre", tags=["Genre"])
 async def get_genres() -> dict:
     return {
@@ -54,7 +53,6 @@ async def get_genre(id: int) -> dict:
     return {
         "error": "No such genre with ID {} exist".format(id)
     }
-
 @app.post("/genre", tags=["Genre"])
 async def add_genre(genre: MovieSchema = Body(...)) -> dict:
     genre.id = len(genres) + 1

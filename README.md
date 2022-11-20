@@ -8,6 +8,24 @@
 -	[Front-end](https://samir-elha.github.io/ "Front-end")
 -	[Repository van front-end](https://github.com/Samir-elha/samir-elha.github.io "Repository van front-end")
 
+## OpenAPI docs
+Hieronder heb ik de openapi docs open met uitleg.
+
+<img width="959" alt="image" src="https://user-images.githubusercontent.com/91054513/202922291-3d04e7a3-6be9-4b72-b31e-d14ca289520a.png">
+
+### GET /genre
+
+<img width="731" alt="image" src="https://user-images.githubusercontent.com/91054513/202922456-7719f4d9-3d5a-47e1-8dec-494447adba51.png">
+
+
+### GET /genre{idS}
+
+<img width="582" alt="image" src="https://user-images.githubusercontent.com/91054513/202922511-a7a58a2e-9f1b-4a7b-b9af-729aca175bb3.png">
+
+### POST /genre
+
+<img width="582" alt="image" src="https://user-images.githubusercontent.com/91054513/202922527-ec970ccf-e457-4e5d-9feb-0cba935baf46.png">
+
 ## GET via Postman
 Hieronder zie je een eenvoudige get request.
 

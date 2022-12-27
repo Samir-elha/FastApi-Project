@@ -10,7 +10,7 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "https://localhost",
-    "https://samir-elha.github.io"
+    "https://samir-elha2.github.io"
 ]
 
 app.add_middleware(

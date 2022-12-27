@@ -7,6 +7,7 @@ client = MongoClient(connection_details)
 database = client.recipes
 
 movie_collection = database.get_collection('movies_collection')
+
 def parse_movie_data(movie) -> dict:
     return {
         "id": str(movie["_id"]),
